@@ -311,26 +311,33 @@ html:not(.js) .mini{grid-row:auto;grid-column:1/-1}
 .one h3{font-size:clamp(24px,2.2vw,32px);line-height:1.05;letter-spacing:-.025em;font-weight:500;max-width:20ch}
 .one .btn{margin-top:8px}
 
-/* 03 · la visita */
-.proc .aside .big{font-family:var(--display);font-size:clamp(20px,1.8vw,26px);line-height:1.15;letter-spacing:-.02em;font-weight:500;color:var(--ink)}
-.proc .head h2{grid-column:1/span 8;max-width:none;font-size:clamp(34px,3.7vw,54px)}
+/* 03 · la visita: texto a la izquierda, la casa con cinco rótulos a la derecha (composición del mockup) */
+.sec.proc{padding:clamp(112px,12.5vw,160px) 0}
+.visita-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;align-items:start}
+.vcol{grid-column:1/span 5;display:grid;justify-items:start}
+.vcol .eyebrow{justify-self:stretch}
+.vcol .eyebrow::before{display:none}
+.vcol .eyebrow::after{content:"";flex:0 1 clamp(56px,7vw,104px);height:1px;background:currentColor;opacity:.5}
+.vcol h2{margin-top:clamp(20px,2.2vw,30px);max-width:none;font-size:clamp(32px,3vw,44px);text-wrap:balance}
 .proc h2 .ac{font-style:italic;color:var(--blue)}
-.mapa{margin:clamp(48px,4vw,64px) 0 0}
+.vcol .lead{margin-top:clamp(16px,1.6vw,24px);max-width:31em;font-size:clamp(16px,1.15vw,17px);color:var(--ink-2)}
+.via{list-style:none;margin:clamp(26px,2.6vw,38px) 0 0;padding:0;display:grid;gap:20px}
+.via-item{display:grid;grid-template-columns:48px minmax(0,1fr);gap:2px 16px;align-items:center}
+.via-ico{grid-row:1/span 2;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--paper-2);color:var(--blue)}
+.via-ico svg{width:24px;height:24px}
+.via-item b{font-family:var(--display);font-size:17px;font-weight:500;line-height:1.2;letter-spacing:-.01em;color:var(--ink)}
+.via-item span{font-size:14.5px;line-height:1.4;color:var(--ink-2)}
+.vcol .btn{margin-top:clamp(26px,2.6vw,38px)}
+.mapa{grid-column:6/span 7;position:relative;margin:0}
 .mapa img{display:block;width:100%;height:auto}
-.mapa-pie{margin-top:12px;max-width:42ch;font-size:13px;line-height:1.4;color:var(--ink-2)}
+.mapa .leader{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.mapa .leader line{stroke:var(--blue-deep);stroke-width:1;stroke-opacity:.9;vector-effect:non-scaling-stroke}
+.mapa .leader circle{fill:var(--blue-deep)}
+.call{position:absolute;display:grid;grid-template-columns:20px minmax(0,1fr);gap:2px 8px;align-items:center;width:max-content;max-width:200px;padding:8px 10px 9px;border-radius:10px;background:var(--white);box-shadow:inset 0 0 0 1px var(--line),0 6px 18px -10px rgba(10,23,85,.28)}
+.call .n{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;font-size:11px;font-weight:600;line-height:1}
+.call b{font-size:13px;font-weight:600;line-height:1.2;color:var(--ink)}
+.call p{grid-column:1/-1;font-size:12.5px;line-height:1.35;color:var(--ink-2)}
 .mapa-lista{display:none}
-.proc h3.k{margin-top:clamp(48px,4vw,64px);font-family:inherit;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--blue-deep);margin-bottom:22px}
-.strip{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(20px,2.4vw,40px)}
-.strip::before,.strip::after{content:"";position:absolute;left:0;right:0;top:calc(clamp(48px,4.4vw,64px)*.8 + 18px);height:1px;background:var(--line)}
-.strip::after{right:auto;width:0;height:3px;margin-top:-1px;border-radius:3px;background:linear-gradient(90deg,var(--blue),var(--teal));transition:width 2.6s var(--ease) .4s}
-.strip.in::after,html:not(.js) .strip::after{width:100%}
-.step{position:relative}
-.step .num{display:block;font-family:var(--display);font-size:clamp(48px,4.4vw,64px);font-weight:400;letter-spacing:-.05em;line-height:.8;color:var(--grey-2);transition:color .6s}
-.step:hover .num{color:var(--blue)}
-.step .dot{display:block;width:9px;height:9px;border-radius:50%;background:var(--paper);box-shadow:0 0 0 1.5px var(--blue);margin:14px 0 22px;position:relative;z-index:1}
-.step small{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
-.step p{font-size:15px;color:var(--ink-2)}
-.step p b{display:block;font-family:var(--display);font-weight:500;color:var(--ink);font-size:clamp(18px,1.4vw,20px);line-height:1.2;letter-spacing:-.015em;margin-bottom:6px}
 .proc .cta-row{margin-top:clamp(40px,4.6vw,64px);display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 
 /* 04 · albert */
@@ -426,15 +433,28 @@ html:not(.js) .mini{grid-row:auto;grid-column:1/-1}
   .chips .t{grid-column:1/-1}
   .sys-foot{grid-template-rows:none}
   .ba,.ba-text,.one{grid-column:1/-1;grid-row:auto}
-  .strip{grid-template-columns:1fr;gap:0}
-  .strip::before,.strip::after{display:none}
-  .step{display:grid;grid-template-columns:72px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
-  .step:last-child{border-bottom:1px solid var(--line)}
-  .step .num{font-size:44px}
-  .step .dot{display:none}
   .alb-grid,.close-grid{grid-template-columns:1fr}
   .portrait{position:relative;top:0;max-width:420px;aspect-ratio:5/4}
   .form{position:relative;top:0;order:-1}
+}
+@media (max-width:1180px) and (min-width:901px){
+  /* la casa gana ancho a costa del margen de la página */
+  .mapa{margin:0 -24px 0 -14px}
+}
+@media (max-width:1100px){
+  /* con la casa por debajo de ~640 px los rótulos se comen el dibujo: pasan a lista debajo */
+  .call,.mapa .leader{display:none}
+  .mapa-lista{display:grid;list-style:none;margin:28px 0 0;padding:0;gap:0}
+  .mapa-lista li{display:grid;gap:2px;padding:12px 0;border-top:1px solid var(--line)}
+  .mapa-lista li:last-child{border-bottom:1px solid var(--line)}
+  .mapa-lista b{font-size:15px;font-weight:500;color:var(--ink)}
+  .mapa-lista span{font-size:14px;color:var(--ink-2)}
+}
+@media (max-width:900px){
+  /* la visita: una columna, el texto y después la casa */
+  .visita-grid{grid-template-columns:minmax(0,1fr)}
+  .vcol,.mapa{grid-column:1/-1}
+  .mapa{margin-top:40px}
 }
 @media (max-width:760px){
   /* recorte cuadrado: línea de agua al 37,94 % del archivo; punta ≈19 % y fondo del hielo ≈55 % del ancho */
@@ -454,11 +474,6 @@ html:not(.js) .mini{grid-row:auto;grid-column:1/-1}
   .act-img{grid-column:1;grid-row:1}
   .act-copy{grid-column:1;grid-row:2}
   .mini{grid-column:1;grid-row:3;max-width:none}
-  .mapa-lista{display:grid;list-style:none;margin:28px 0 0;padding:0;gap:0}
-  .mapa-lista li{display:grid;gap:2px;padding:12px 0;border-top:1px solid var(--line)}
-  .mapa-lista li:last-child{border-bottom:1px solid var(--line)}
-  .mapa-lista b{font-size:15px;font-weight:500;color:var(--ink)}
-  .mapa-lista span{font-size:14px;color:var(--ink-2)}
 }
 @media (max-width:620px){
   body{font-size:16px}
@@ -488,8 +503,6 @@ html:not(.js) .mini{grid-row:auto;grid-column:1/-1}
   .ba-pills b{font-size:14px}
   .ba-pills .pill-after{column-gap:8px}
   .ba-pills svg{width:18px;height:18px}
-  .step{grid-template-columns:52px 1fr;gap:12px}
-  .step .num{font-size:36px}
   .portrait{max-width:none;aspect-ratio:16/11}
   .twenty b{font-size:64px}
   .form .btn{flex:1 1 100%}
@@ -725,41 +738,48 @@ html:not(.js) .mini{grid-row:auto;grid-column:1/-1}
 <!-- ============ 3 · LA VISITA ============ -->
 <section class="sec proc" id="visita">
   <div class="wrap">
-    <div class="head">
-      <span class="eyebrow rv">03 · La visita</span>
-      <h2 class="rv d1">La mejor recomendación empieza por <span class="ac">conocer tu agua</span>.</h2>
-      <div class="aside rv d2">
-        <p class="big">¿Cómo saber si esta solución es adecuada para tu vivienda?</p>
-        <p>Cada hogar tiene unas características diferentes y es por eso que, antes de recomendarte este sistema, quiero conocer tu situación.</p>
+    <div class="visita-grid">
+      <div class="vcol">
+        <span class="eyebrow rv">03 · La visita</span>
+        <h2 class="rv d1">La mejor recomendación empieza por <span class="ac">conocer tu agua</span>.</h2>
+        <p class="lead rv d2">Cada hogar tiene unas características diferentes y es por eso que, antes de recomendarte este sistema, quiero conocer tu situación.</p>
+        <ul class="via rv d2">
+          <li class="via-item"><span class="via-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/></svg></span><b>Revisión de tu vivienda</b><span>Haré una valoración de tu instalación, revisando las características necesarias para determinar la idoneidad del sistema.</span></li>
+          <li class="via-item"><span class="via-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.2 6 10.6A6 6 0 0 1 6 13.6C6 9.2 12 3 12 3Z"/></svg></span><b>Medición de tu agua</b><span>Realizaré una medición para conocer el nivel de dureza del agua de tu hogar.</span></li>
+          <li class="via-item"><span class="via-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 14.6a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.4 1Z"/></svg></span><b>Ubicación e instalación</b><span>Conocerás cómo funciona la tecnología, sus características, las condiciones de instalación y la inversión necesaria.</span></li>
+        </ul>
+        <a class="btn rv d3" href="#contacto">Solicita tu visita gratuita <span class="arr"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5"/></svg></span></a>
       </div>
-    </div>
 
-    <figure class="mapa rv">
-      <img src="assets/visita-casa.avif" width="1536" height="1018"
-           alt="Corte isométrico de una vivienda con el recorrido del agua: entrada, sistema idamCAL, cocina, baño, lavadero y termo.">
-      <figcaption class="mapa-pie">El recorrido del agua en tu vivienda.</figcaption>
-    </figure>
+      <figure class="mapa rv d1">
+        <img src="assets/visita-plano.avif" width="1444" height="1018"
+             alt="Corte isométrico de una vivienda con el recorrido del agua: entrada con el sistema idamCAL, cocina, baño, lavadero y termo.">
+        <svg class="leader" viewBox="0 0 1444 1018" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="633.9" y1="814.4" x2="634.5" y2="798.0"/>
+          <line x1="346.6" y1="178.1" x2="637.8" y2="282.8"/>
+          <line x1="1184.1" y1="142.5" x2="1057.2" y2="252.7"/>
+          <line x1="1184.1" y1="432.6" x2="1101.2" y2="473.9"/>
+          <line x1="1184.1" y1="631.2" x2="1230.1" y2="563.7"/>
+          <circle cx="634.5" cy="798.0" r="7"/>
+          <circle cx="637.8" cy="282.8" r="7"/>
+          <circle cx="1057.2" cy="252.7" r="7"/>
+          <circle cx="1101.2" cy="473.9" r="7"/>
+          <circle cx="1230.1" cy="563.7" r="7"/>
+        </svg>
+        <div class="call" style="left:33%;bottom:1.5%"><span class="n">1</span><b>Entrada principal</b><p>El sistema se instala en la entrada de agua de tu vivienda.</p></div>
+        <div class="call" style="left:10%;top:2%"><span class="n">2</span><b>Cocina</b><p>Agua tratada en toda la casa, también en tu cocina.</p></div>
+        <div class="call" style="right:0%;top:1%"><span class="n">3</span><b>Baño</b><p>Protección frente a la cal en duchas, grifería y mamparas.</p></div>
+        <div class="call" style="right:0%;top:29%"><span class="n">4</span><b>Lavadero</b><p>Cuida la lavadora y sus resistencias.</p></div>
+        <div class="call" style="right:0%;top:62%"><span class="n">5</span><b>Termo de agua</b><p>Termos y calentadores, protegidos frente a la cal.</p></div>
+      </figure>
+    </div>
     <ol class="mapa-lista">
-      <li><b>1 · Entrada de agua</b><span>El agua de la red entra en tu vivienda.</span></li>
-      <li><b>2 · Sistema idamCAL</b><span>Se instala en la entrada de agua de tu vivienda.</span></li>
-      <li><b>3 · Agua tratada</b><span>Se distribuye por toda la vivienda.</span></li>
-      <li><b>4 · Cocina</b><span>Cafeteras, hervidores y lavavajillas, protegidos frente a la cal.</span></li>
-      <li><b>5 · Baño</b><span>Griferías y mamparas, protegidas frente a la cal.</span></li>
-      <li><b>6 · Lavadero</b><span>Cuida la lavadora y sus resistencias.</span></li>
-      <li><b>7 · Termo de agua</b><span>Termos y calentadores, protegidos frente a la cal.</span></li>
+      <li><b>1 · Entrada principal</b><span>El sistema se instala en la entrada de agua de tu vivienda.</span></li>
+      <li><b>2 · Cocina</b><span>Agua tratada en toda la casa, también en tu cocina.</span></li>
+      <li><b>3 · Baño</b><span>Protección frente a la cal en duchas, grifería y mamparas.</span></li>
+      <li><b>4 · Lavadero</b><span>Cuida la lavadora y sus resistencias.</span></li>
+      <li><b>5 · Termo de agua</b><span>Termos y calentadores, protegidos frente a la cal.</span></li>
     </ol>
-
-    <h3 class="k rv">Así será tu visita gratuita a domicilio</h3>
-    <ol class="strip rv">
-      <li class="step"><span class="num">01</span><div><span class="dot"></span><small>Escucha</small><p><b>Escucharé tus necesidades.</b> Me contarás qué problemas de cal estás experimentando y qué te gustaría solucionar.</p></div></li>
-      <li class="step"><span class="num">02</span><div><span class="dot"></span><small>Medición</small><p><b>Realizaré una medición</b> para conocer el nivel de dureza del agua de tu hogar.</p></div></li>
-      <li class="step"><span class="num">03</span><div><span class="dot"></span><small>Valoración</small><p><b>Haré una valoración de tu instalación,</b> revisando las características necesarias para determinar la idoneidad del sistema.</p></div></li>
-      <li class="step"><span class="num">04</span><div><span class="dot"></span><small>Explicación</small><p><b>Conocerás cómo funciona la tecnología,</b> sus características, las condiciones de instalación y la inversión necesaria.</p></div></li>
-      <li class="step"><span class="num">05</span><div><span class="dot"></span><small>Decisión</small><p><b>Podrás valorar toda la información</b> y elegir lo que consideres más adecuado para tu hogar.</p></div></li>
-    </ol>
-    <div class="cta-row rv">
-      <a class="btn" href="#contacto">Solicita tu visita <span class="arr"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5"/></svg></span></a>
-    </div>
   </div>
 </section>
 
