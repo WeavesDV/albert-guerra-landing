@@ -205,8 +205,7 @@ em{font-family:var(--display);font-style:italic}
 .perks__row li{display:flex;align-items:center;gap:clamp(14px,1.6vw,22px);padding:6px clamp(12px,2vw,32px);font-family:var(--display);font-size:clamp(1.5rem,3.2vw,3rem);font-weight:800;line-height:1;letter-spacing:-.035em}
 .perks__row li:first-child{padding-left:0}
 .perks__row li+li{border-left:1px solid var(--line-l)}
-.perks__row svg{flex:none;width:clamp(40px,4.4vw,64px);height:auto;fill:none;stroke:var(--aqua);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-.perks__note{margin-top:18px;font-size:12px;color:rgba(255,255,255,.62)}
+.perks__row img{flex:none;width:clamp(40px,4.4vw,64px);height:auto}
 
 /* 02 · funciones */
 .functions{background:var(--paper);padding-bottom:0}

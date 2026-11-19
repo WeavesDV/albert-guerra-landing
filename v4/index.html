@@ -13,7 +13,7 @@
   Sin foto todavía: los cuatro ejemplos de cal, el retrato de Albert y la ducha partida.
 -->
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="styles.css?v=mobile-portrait">
+<link rel="stylesheet" href="styles.css?v=iconos-catalogo">
 <script src="app.js" defer></script>
 </head>
 <body>
@@ -144,31 +144,21 @@
 
     <div class="perks">
       <p class="perks__intro">Y todo ello con tres grandes ventajas:</p>
-      <!-- ICONOS PROVISIONALES dibujados para la vista previa; NO son los del catálogo. Sustituir (ver CAMBIO.md) -->
       <ul class="perks__row">
         <li>
-          <svg viewBox="0 0 48 48" aria-hidden="true" data-provisional="icono">
-            <rect x="9" y="25" width="16" height="10" rx="5"/><rect x="23" y="25" width="16" height="10" rx="5"/><rect x="16" y="14" width="16" height="10" rx="5"/>
-            <path d="M7 41 41 7"/>
-          </svg>
+          <img src="assets/catalogo-sin-sal.webp" width="180" height="180" alt="" loading="lazy">
           <span>Sin sal</span>
         </li>
         <li>
-          <svg viewBox="0 0 48 48" aria-hidden="true" data-provisional="icono">
-            <circle cx="24" cy="24" r="14"/><path d="M17 20h14M15 24h18M17 28h14"/>
-            <path d="M7 41 41 7"/>
-          </svg>
+          <img src="assets/catalogo-sin-desague.webp" width="180" height="180" alt="" loading="lazy">
           <span>Sin desagüe</span>
         </li>
         <li>
-          <svg viewBox="0 0 48 48" aria-hidden="true" data-provisional="icono">
-            <path d="M19 9v8M29 9v8M14 17h20v7a10 10 0 0 1-20 0zM24 34v7"/>
-            <path d="M7 41 41 7"/>
-          </svg>
+          <img src="assets/catalogo-sin-electricidad.webp" width="180" height="180" alt="" loading="lazy">
           <span>Sin electricidad</span>
         </li>
       </ul>
-      <p class="perks__note">Iconos provisionales, a la espera de los del catálogo.</p>
+
     </div>
   </div>
 </section>
@@ -227,30 +217,29 @@
     </div>
   </div>
 
-  <!-- comparador: imágenes del catálogo, ilustrativas y provisionales. Sin JS se ven las dos fotos lado a lado -->
-  <div class="compare">
+  <div class="compare" id="comparador">
     <div class="wrap compare__grid">
       <div class="compare__copy">
         <p class="index index--light"><span>↔</span>Antes · después</p>
         <h3 class="compare__t">La tubería, <em>antes y después</em></h3>
         <ul class="compare__key">
-          <li><i class="dot dot--before" aria-hidden="true"></i>Sin protección</li>
-          <li><i class="dot dot--after" aria-hidden="true"></i>Con protección</li>
+          <li><i class="dot dot--before" aria-hidden="true"></i>Con depósitos de cal</li>
+          <li><i class="dot dot--after" aria-hidden="true"></i>Con menos depósitos</li>
         </ul>
         <p class="compare__hint">Arrastra el control o, con el foco en la imagen, usa las flechas del teclado.</p>
-        <p class="compare__caveat">Imágenes ilustrativas del catálogo. Comparador provisional: selección final de imágenes pendiente.</p>
+
       </div>
 
       <figure class="ba">
         <div class="ba__frame" id="ba" style="--p:50%">
-          <img class="ba__img ba__after" src="assets/despues-tuberia.avif" width="900" height="900" alt="Tubería con el interior limpio, imagen ilustrativa del catálogo" loading="lazy">
-          <img class="ba__img ba__before" src="assets/antes-tuberia.avif" width="900" height="900" alt="Tubería con cal acumulada en el interior, imagen ilustrativa del catálogo" loading="lazy">
-          <span class="ba__tag ba__tag--before" aria-hidden="true">Sin protección</span>
-          <span class="ba__tag ba__tag--after" aria-hidden="true">Con protección</span>
+          <img class="ba__img ba__after" src="assets/racor-despues-moderado.webp" width="900" height="900" alt="Racor roscado con menos depósitos de cal en el interior." loading="lazy">
+          <img class="ba__img ba__before" src="assets/racor-antes-moderado.webp" width="900" height="900" alt="Racor roscado con depósitos leves de cal y el paso abierto." loading="lazy">
+          <span class="ba__tag ba__tag--before" aria-hidden="true">Antes</span>
+          <span class="ba__tag ba__tag--after" aria-hidden="true">Después</span>
           <span class="ba__handle" aria-hidden="true"><span class="ba__knob">‹ ›</span></span>
-          <input class="ba__range" type="range" min="0" max="100" step="1" value="50" aria-label="Comparar la tubería sin protección y con protección">
+          <input class="ba__range" type="range" min="0" max="100" step="1" value="50" aria-label="Comparar el racor con depósitos de cal y con menos depósitos">
         </div>
-        <figcaption class="ba__cap">Imágenes ilustrativas del catálogo.</figcaption>
+        <figcaption class="ba__cap">Simulación visual de depósitos de cal; no es una prueba de rendimiento.</figcaption>
       </figure>
     </div>
 
