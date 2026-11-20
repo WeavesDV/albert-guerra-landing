@@ -158,7 +158,9 @@ em{font-family:var(--display);font-style:italic}
   -webkit-mask-composite:source-in;mask-composite:intersect;
   -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 @media (min-width:861px){
-  #inicio .hero__media{margin-right:calc(-1 * var(--pad))}
+  #inicio .hero__media{margin-right:calc(-1 * var(--pad));position:relative}
+  /* el pie de foto sale del flujo: así el texto se centra contra la imagen, no contra imagen+pie */
+  #inicio .hero__cap{position:absolute;top:calc(100% + 10px);left:0;right:0;margin:0}
 }
 /* la imagen trae el degradado ya en el encuadre; el fondo del hero hace de fondo continuo */
 .hero__tag{position:absolute;z-index:1;bottom:clamp(20px,3vw,40px);transform:translateX(-50%);padding:.42em 1.15em .48em;border-radius:999px;
