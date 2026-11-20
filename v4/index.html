@@ -9,11 +9,12 @@
 <!--
   VISTA PREVIA DE REVISIÓN — no publicar (ver CAMBIO.md).
   Fotos locales en assets/: instalacion, equipo, corte, accion-* (cuatro funciones),
-  antes-/despues-tuberia (comparador del catálogo, provisional) y visita-plano.
-  Sin foto todavía: los cuatro ejemplos de cal, el retrato de Albert y la ducha partida.
+  antes-/despues-tuberia (comparador del catálogo, provisional), visita-plano, cal-* (cuatro ejemplos)
+  y hero-ducha-split (imagen ilustrativa generada, sin texto).
+  Sin foto todavía: el retrato de Albert.
 -->
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="styles.css?v=iconos-catalogo">
+<link rel="stylesheet" href="styles.css?v=comentarios-2026-11-20">
 <script src="app.js" defer></script>
 <script defer src="siteping-review.js?v=2"></script>
 </head>
@@ -40,38 +41,40 @@
 
 <main id="main">
 
-<!-- ============ CABECERA · escena cálida a sangre; bloque a la izquierda, equipo a la derecha. En móvil: texto sobre crema y la imagen debajo ============ -->
-<!-- la imagen es un visual conceptual de producto, no una foto de instalación -->
+<!-- ============ CABECERA · estilo del anuncio: texto a la izquierda, ducha partida a la derecha. En móvil: texto y la imagen debajo ============ -->
+<!-- la imagen es ilustrativa (generada), no una foto real de un cliente -->
 <section class="hero" id="inicio" aria-labelledby="hero-t">
   <div class="wrap hero__in">
     <div class="hero__copy">
       <p class="kicker">Albert Guerra · Agua y Bienestar</p>
-      <h1 class="hero__title" id="hero-t"><span class="hero__l1">Protege tu hogar</span> <em>de las incrustaciones de cal</em></h1>
-      <p class="hero__sub">y evita gastos innecesarios en reparaciones y sustituciones.</p>
-      <p class="hero__lead">Cuida tus tuberías, griferías, mamparas y electrodomésticos frente al deterioro y la corrosión asociados a la acumulación de cal.</p>
+      <h1 class="hero__title" id="hero-t">¿Problemas con <span class="pill">la cal</span> en tu hogar o negocio?</h1>
+      <p class="hero__sub">Protege tus instalaciones, alarga la vida de tus equipos y recupera su eficiencia.</p>
       <div class="actions">
         <a class="btn btn--primary" href="#contacto">Solicita tu visita <span class="arr" aria-hidden="true">→</span></a>
         <a class="hero__link" href="#sistema">Cómo funciona <span class="arr" aria-hidden="true">→</span></a>
       </div>
     </div>
-  </div>
 
-  <picture class="hero__media">
-    <source media="(min-width: 761px)" srcset="assets/hero-idamcal.webp" width="1672" height="941">
-    <img src="assets/hero-idamcal-portrait.webp" width="941" height="1672" alt="Visual conceptual del equipo idamCAL: cilindro azul con manómetro, racores de latón y tubería de cobre" fetchpriority="high">
-  </picture>
+    <figure class="hero__media">
+      <div class="hero__frame">
+        <img src="assets/hero-ducha-split.webp" width="1536" height="1024" alt="Cabezal de ducha partido en dos: la mitad izquierda cubierta de cal y la derecha limpia, con el agua saliendo." fetchpriority="high">
+        <span class="hero__tag hero__tag--before">Antes</span>
+        <span class="hero__tag hero__tag--after">Después</span>
+      </div>
+      <figcaption class="hero__cap">Imagen ilustrativa: comparación de un mismo cabezal con y sin cal.</figcaption>
+    </figure>
+  </div>
 </section>
 
 <!-- ============ 01 · EL PROBLEMA ============ -->
 <section class="sec problem" id="cal" aria-labelledby="cal-t">
   <div class="wrap">
     <header class="head">
-      <p class="index"><span>01</span>El problema</p>
       <h2 class="h2" id="cal-t">La cal puede estar deteriorando tu hogar <em>sin que te des cuenta.</em></h2>
     </header>
 
     <div class="problem__cols">
-      <p class="problem__lead">Las manchas blancas en grifos y mamparas son solo la parte visible del problema.</p>
+      <p class="problem__lead">El agua puede <span class="pill">cuidar tu hogar</span>, o provocarte costes, averías y molestias.</p>
       <div class="problem__body">
         <p>La cal también puede acumularse en el interior de tuberías, calentadores, termos, resistencias y electrodomésticos como lavadoras, lavavajillas, cafeteras, hervidores, etcétera, provocando obstrucciones, pérdida de eficiencia, mayor necesidad de mantenimiento y posibles gastos en reparaciones o sustituciones.</p>
         <p>Con el paso de los años, estas incrustaciones pueden afectar al funcionamiento de tus instalaciones, incluso en lugares donde no puedes verlas.</p>
@@ -94,20 +97,24 @@
       </div>
       <ul class="examples__grid">
         <li class="ex">
-          <img src="assets/cal-tuberia.webp" width="960" height="720" alt="Depósitos blancos en el interior de una tubería de cobre cortada." loading="lazy" decoding="async">
-          <p class="ex__name"><span>01</span>Tubería</p>
+          <img src="assets/cal-tuberia.webp" width="960" height="720" alt="Depósitos blancos en el interior de una tubería de cobre cortada." loading="lazy">
+          <span class="ex__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h9a7 7 0 0 1 7 7v8"/><path d="M3 11h8a3 3 0 0 1 3 3v7"/><path d="M3 4.5v8M12.5 21h8"/></svg></span>
+          <p class="ex__name">Tubería</p>
         </li>
         <li class="ex">
-          <img src="assets/cal-resistencia.webp" width="960" height="720" alt="Resistencia de un termo con manchas blancas de cal sobre el metal." loading="lazy" decoding="async">
-          <p class="ex__name"><span>02</span>Resistencia / calentador</p>
+          <img src="assets/cal-resistencia.webp" width="960" height="720" alt="Resistencia de un termo con manchas blancas de cal sobre el metal." loading="lazy">
+          <span class="ex__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="17" rx="3"/><path d="M9 19.5v2M15 19.5v2"/><path d="M10 9.5c-1 1.1 1 2.2 0 3.3M14 9.5c-1 1.1 1 2.2 0 3.3"/><path d="M10.5 6h3"/></svg></span>
+          <p class="ex__name">Resistencia / calentador</p>
         </li>
         <li class="ex">
-          <img src="assets/cal-grifo.webp" width="960" height="720" alt="Depósitos de cal alrededor del aireador de un grifo cromado." loading="lazy" decoding="async">
-          <p class="ex__name"><span>03</span>Grifo</p>
+          <img src="assets/cal-grifo.webp" width="960" height="720" alt="Depósitos de cal alrededor del aireador de un grifo cromado." loading="lazy">
+          <span class="ex__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9a4 4 0 0 1 4 4v2"/><path d="M3 12h8a1 1 0 0 1 1 1v1h4"/><path d="M3 6v8"/><path d="M8.5 8V4.5M6.5 4.5h4"/><path d="M14 16.5s-1.6 1.9-1.6 3a1.6 1.6 0 0 0 3.2 0c0-1.1-1.6-3-1.6-3z"/></svg></span>
+          <p class="ex__name">Grifo</p>
         </li>
         <li class="ex">
-          <img src="assets/cal-lavadora.webp" width="960" height="720" alt="Depósitos blancos en la junta de una lavadora de carga frontal." loading="lazy" decoding="async">
-          <p class="ex__name"><span>04</span>Lavadora</p>
+          <img src="assets/cal-lavadora.webp" width="960" height="720" alt="Depósitos blancos en la junta de una lavadora de carga frontal." loading="lazy">
+          <span class="ex__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><path d="M4 7h16"/><path d="M7 4.8h.01M9.5 4.8h.01"/><circle cx="12" cy="14" r="4.5"/><path d="M9.2 14.6c.9-.7 1.9-.7 2.8 0s1.9.7 2.8 0"/></svg></span>
+          <p class="ex__name">Lavadora</p>
         </li>
       </ul>
     </div>
@@ -120,7 +127,6 @@
 <section class="sec solution" id="sistema" aria-labelledby="sis-t">
   <div class="wrap">
     <header class="solution__head">
-      <p class="index index--light"><span>02</span>La solución</p>
       <h2 class="solution__title" id="sis-t"><span class="solution__kicker">La solución:</span> IDAM CAL, <em>tratamiento antical</em></h2>
     </header>
 
@@ -168,7 +174,6 @@
 <section class="sec functions" id="funciones" aria-labelledby="fn-t">
   <div class="wrap">
     <header class="head head--split">
-      <p class="index"><span>02</span>Funciones</p>
       <h2 class="h2" id="fn-t">Incorpora <em>cuatro funciones</em></h2>
     </header>
 
@@ -221,7 +226,6 @@
   <div class="compare" id="comparador">
     <div class="wrap compare__grid">
       <div class="compare__copy">
-        <p class="index index--light"><span>↔</span>Antes · después</p>
         <h3 class="compare__t">La tubería, <em>antes y después</em></h3>
         <ul class="compare__key">
           <li><i class="dot dot--before" aria-hidden="true"></i>Con depósitos de cal</li>
@@ -255,7 +259,6 @@
 <section class="sec visit" id="visita" aria-labelledby="vis-t">
   <div class="wrap visit__grid">
     <div class="visit__copy">
-      <p class="index"><span>03</span>La visita</p>
       <h2 class="h2" id="vis-t">¿Cómo saber si esta solución es adecuada para <em>tu vivienda?</em></h2>
       <p class="visit__lead">La mejor recomendación empieza por conocer tu agua.</p>
       <p class="visit__body">Cada hogar tiene unas características diferentes y es por eso que, antes de recomendarte este sistema, quiero conocer tu situación.</p>
@@ -288,7 +291,6 @@
     </figure>
 
     <div class="about__copy">
-      <p class="index"><span>04</span>Quién soy</p>
       <h2 class="h2" id="alb-t">¿Quién soy?</h2>
       <p class="about__lead">Soy Albert Guerra, asesor independiente de soluciones para el tratamiento del agua.</p>
       <p class="about__years">Llevo cerca de 20 años asesorando a personas, escuchando sus necesidades y ayudándolas a encontrar soluciones.</p>
@@ -303,6 +305,10 @@
 
   <!-- franja pedida por Albert; la frase destacada es provisional (confirmar) -->
   <div class="band">
+    <svg class="band__wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path class="band__wave-glow" d="M0 58C180 30 340 24 520 40s340 44 520 30 300-46 400-50v20C1340 44 1200 76 1040 86s-340-14-520-30S180 50 0 78z"/>
+      <path d="M0 0h1440v20c-100 4-240 34-400 50s-340-14-520-30S180 30 0 58z"/>
+    </svg>
     <div class="wrap band__in">
       <p class="band__line">Hoy lo que más valoro es la confianza y la conexión que se crea con cada persona.</p>
       <a class="btn btn--light" href="#contacto">Solicita tu visita <span class="arr" aria-hidden="true">→</span></a>
@@ -314,7 +320,6 @@
 <section class="sec trust" id="contacto" aria-labelledby="tr-t">
   <div class="wrap trust__grid">
     <div class="trust__copy">
-      <p class="index"><span>05</span>Confianza</p>
       <h2 class="h2" id="tr-t">¿Por qué confío en <em>lo que recomiendo?</em></h2>
       <p class="trust__key">Contarás con mi asesoramiento cercano, instalación profesional, seguimiento de los mantenimientos y alguien de confianza que responda cuando lo necesites.</p>
       <div class="trust__prose">
