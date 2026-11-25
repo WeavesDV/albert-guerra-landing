@@ -69,8 +69,12 @@ em{font-family:var(--display);font-style:italic}
   background:radial-gradient(90% 70% at 30% 100%,rgba(150,215,245,.22),rgba(150,215,245,0) 68%)}
 
 /* tramo #sistema → #funciones (con .compare dentro): una sola rampa repartida en dos mitades.
-   La junta casa por construcción: --agua-2 cierra .solution y abre .functions. */
-.solution{background-color:var(--agua-1);background-image:linear-gradient(180deg,var(--agua-1),var(--agua-2))}
+   La junta casa por construcción: --agua-2 cierra .solution y abre .functions.
+   La entrada desde «La cal» (papel) se hace en degradado: la franja de llegada arranca en --paper,
+   llega al azul pleno en --arrival y el contenido empieza después, ya sobre azul. */
+.solution{--arrival:clamp(140px,18vw,260px);background-color:var(--agua-1);
+  background-image:linear-gradient(180deg,#fff 0,var(--agua-1) var(--arrival),var(--agua-2) 100%)}
+.sec.solution{padding-top:calc(var(--arrival) + clamp(16px,2vw,32px))}
 .functions{background-color:var(--agua-2);background-image:linear-gradient(180deg,var(--agua-2),var(--agua-3))}
 .compare{background:transparent}
 
