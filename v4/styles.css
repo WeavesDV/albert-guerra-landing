@@ -24,9 +24,9 @@
   --aqua:#8FD6F5;       /* acento sobre oscuro (azul claro, sin verde) */
   --cian-claro:#DCEFFB; /* pastilla sobre oscuro */
 
-  /* degradado de agua: tres paradas en un solo eje, de oscuro a menos oscuro y sin volver a oscurecer.
-     Punto más claro (--agua-3): #FFF 8,3:1 · --aqua 5,2:1. */
-  --agua-1:#0460B0; --agua-2:#06669F; --agua-3:#0A6E9A;
+  /* degradado de agua: tres paradas en un solo eje, de menos oscuro a más oscuro.
+     Paleta del cliente (24-nov-2026). Punto más claro (--agua-1): #FFF 4,6:1. */
+  --agua-1:#1676D2; --agua-2:#0B57A8; --agua-3:#08346C;
   --agua:linear-gradient(180deg,var(--agua-1) 0%,var(--agua-2) 45%,var(--agua-3) 100%);
 
   --r:18px;
@@ -217,12 +217,12 @@ em{font-family:var(--display);font-style:italic}
 .solution__title{font-family:var(--display);font-weight:900;font-size:clamp(2.6rem,8vw,7.5rem);line-height:.9;letter-spacing:-.05em}
 .solution__title em{display:table;margin-top:.22em;padding:.06em .32em .1em;border-radius:.22em;background:var(--cian-claro);color:var(--ink);
   font-weight:700;font-size:max(.42em,1.35rem);letter-spacing:-.02em;line-height:1.05}
-.solution__kicker{display:block;font-family:var(--body);font-size:clamp(14px,1.2vw,16px);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua);margin-bottom:.9em}
+.solution__kicker{display:block;font-family:var(--body);font-size:clamp(14px,1.2vw,16px);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:.9em}
 .solution__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,88px);margin-top:clamp(40px,5vw,72px);align-items:start}
 .solution__h3{font-family:var(--display);font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;line-height:1.06;letter-spacing:-.035em}
 .jp{margin-top:clamp(28px,3vw,40px);padding:clamp(22px,2.4vw,32px) clamp(18px,2vw,28px);border-left:4px solid var(--aqua);border-radius:0 var(--r) var(--r) 0;
-  background:linear-gradient(90deg,rgba(255,255,255,.12),rgba(255,255,255,.02));font-family:var(--display);font-style:italic;font-size:clamp(1.3rem,2vw,1.85rem);font-weight:500;line-height:1.2;letter-spacing:-.015em}
-.jp__tag{display:block;margin-bottom:12px;font-family:var(--body);font-style:normal;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua)}
+  background:linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,.05));font-family:var(--display);font-style:italic;font-size:clamp(1.3rem,2vw,1.85rem);font-weight:500;line-height:1.2;letter-spacing:-.015em}
+.jp__tag{display:block;margin-bottom:12px;font-family:var(--body);font-style:normal;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#fff}
 .solution__body{margin-top:clamp(24px,2.6vw,36px);color:rgba(255,255,255,.93);max-width:40em}
 
 .solution__media{position:relative;padding-bottom:clamp(80px,9vw,140px)}
@@ -253,10 +253,10 @@ em{font-family:var(--display);font-style:italic}
 .tab__t{font-family:var(--display);font-size:clamp(1.05rem,1.6vw,1.45rem);font-weight:800;line-height:1.05;letter-spacing:-.025em}
 /* realce solo en las inactivas y solo con background-color: el atajo `background` borraba el degradado de la activa */
 .tab:not([aria-selected="true"]):hover{background-color:#F5F9FD}
-.tab[aria-selected="true"]{color:#fff;background-image:linear-gradient(180deg,#0B4062,#1B5F86);
+.tab[aria-selected="true"]{color:#fff;background-image:linear-gradient(180deg,#0B3A75,#0A5CB0);
   box-shadow:inset 0 0 0 2px rgba(255,255,255,.92),0 16px 28px -18px rgba(3,30,50,.8)}
 .tab[aria-selected="true"]:hover{box-shadow:inset 0 0 0 2px var(--aqua),0 16px 28px -18px rgba(3,30,50,.8)}
-.tab[aria-selected="true"] .tab__n{color:var(--aqua)}
+.tab[aria-selected="true"] .tab__n{color:#fff}
 .tab[aria-selected="true"]::after{content:"";position:absolute;left:calc(50% - 8px);bottom:-8px;width:16px;height:16px;border-radius:3px;background:var(--agua-3);transform:rotate(45deg)}
 .tab:focus-visible{outline-offset:-4px;z-index:1}
 .tab[aria-selected="true"]:focus-visible,.functions .panel:focus-visible{outline-color:var(--aqua)}
@@ -352,7 +352,7 @@ html:not(.js) .ba__handle,html:not(.js) .ba__range{display:none}
 
 .form{position:sticky;top:92px;padding:clamp(24px,3vw,40px);border-radius:var(--r);color:#fff;
   box-shadow:inset 0 1px 0 rgba(160,220,248,.35),0 40px 70px -44px rgba(4,40,70,.7)}
-.form__flag{display:inline-block;padding:4px 10px;border:1px solid var(--line-l);border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua)}
+.form__flag{display:inline-block;padding:4px 10px;border:1px solid var(--line-l);border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff}
 .form__t{margin:18px 0 24px;font-family:var(--display);font-size:clamp(1.6rem,2.4vw,2.2rem);font-weight:900;line-height:1;letter-spacing:-.035em;text-wrap:balance}
 .field{display:grid;gap:6px;margin-bottom:14px}
 .field label{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
@@ -371,7 +371,7 @@ html:not(.js) .ba__handle,html:not(.js) .ba__range{display:none}
 .form__status:not(:empty){padding:12px 14px;border-left:3px solid var(--aqua);border-radius:0 var(--r-btn) var(--r-btn) 0;background:rgba(255,255,255,.1)}
 
 /* pie */
-.foot{padding:clamp(40px,5vw,64px) 0;background:linear-gradient(180deg,var(--agua-1) 0%,#072A42 100%);color:#fff}
+.foot{padding:clamp(40px,5vw,64px) 0;background:linear-gradient(180deg,var(--agua-3) 0%,#06244C 100%);color:#fff}
 .foot__in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px}
 .foot__word{font-family:var(--display);font-size:clamp(1.5rem,3.4vw,3rem);font-weight:900;text-transform:uppercase;letter-spacing:-.03em;line-height:.95}
 .foot__word span{font-weight:500;color:var(--aqua)}
