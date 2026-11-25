@@ -170,7 +170,7 @@ em{font-family:var(--display);font-style:italic}
 .hero__tag--before{left:25%;background:rgba(16,26,38,.74);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.45)}
 .hero__tag--after{left:75%;background:linear-gradient(100deg,var(--turquesa) 0%,var(--azul) 70%);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 0 0 1px rgba(255,255,255,.3),0 8px 18px -8px rgba(4,96,176,.85)}
-.hero__cap{margin-top:12px;font-size:13px;color:var(--ink-2)}
+.hero__cap{margin-top:12px;font-size:13px;color:var(--ink-2);text-align:center}
 
 @media (max-width:860px){
   #inicio .hero__in{grid-template-columns:minmax(0,1fr);gap:32px}
@@ -188,9 +188,8 @@ em{font-family:var(--display);font-style:italic}
 
 .ledger{margin-top:clamp(56px,6vw,96px)}
 .ledger__list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:16px;border-top:3px solid var(--ink)}
-.ledger__list li{display:grid;align-content:start;gap:18px;padding:20px 20px 4px 0;font-family:var(--display);font-size:clamp(1.15rem,1.7vw,1.6rem);font-weight:700;line-height:1.1;letter-spacing:-.02em}
+.ledger__list li{display:block;padding:20px 20px 4px 0;font-family:var(--display);font-size:clamp(1.15rem,1.7vw,1.6rem);font-weight:700;line-height:1.1;letter-spacing:-.02em}
 .ledger__list li+li{padding-left:20px;border-left:1px solid var(--line)}
-.ledger__n{font-family:var(--body);font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--azul)}
 
 /* «Dónde se acumula» (C4): foto arriba, icono circular sobre el borde de la foto, título centrado */
 .examples{margin-top:clamp(56px,6vw,96px)}
