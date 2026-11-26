@@ -55,6 +55,7 @@ em{font-family:var(--display);font-style:italic}
 :focus-visible{outline:3px solid var(--azul);outline-offset:3px}
 
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .skip{position:absolute;left:12px;top:-60px;z-index:50;padding:10px 16px;background:var(--ink);color:#fff;border-radius:6px;text-decoration:none}
 .skip:focus{top:12px}
 
@@ -182,8 +183,9 @@ em{font-family:var(--display);font-style:italic}
 /* 01 · problema */
 .problem{background:var(--white)}
 .problem__cols{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,88px);align-items:start}
-.problem__lead{font-family:var(--display);font-size:clamp(1.6rem,2.6vw,2.4rem);font-weight:900;line-height:1.12;letter-spacing:-.035em;color:var(--ink);text-wrap:balance}
+.problem__lead{font-family:var(--display);font-size:1em;font-weight:800;line-height:1.35;letter-spacing:-.015em;color:var(--ink);text-wrap:pretty}
 .problem__lead .pill{white-space:nowrap}
+.nb{white-space:nowrap}
 .problem__body{display:grid;gap:16px;color:var(--ink-2)}
 
 .ledger{margin-top:clamp(56px,6vw,96px)}
